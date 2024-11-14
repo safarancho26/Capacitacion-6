@@ -13,4 +13,6 @@ jobs:
       - name: concatenar
     
         run: |
-         "$apellido="Gaitan" echo {{env.Nombre}} echo $apellido"
+         apellido="Gaitan" 
+         echo ${{env.Nombre}} 
+         echo $apellido
