@@ -1,6 +1,6 @@
 name: "primera automatizacion"
 
-on: [workflow_dispatch] #disparador manual
+on: workflow_dispatch #disparador manual
 
 env:
   Nombre: "Eliany"
