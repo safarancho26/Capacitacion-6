@@ -10,7 +10,7 @@ jobs:
   steps:
     name: concatenar
     runs-on: ubuntu-lastest
-    run: |
+     run: |
         $apellido="Gaitan"
         echo {{env.Nombre}}
         echo $apellido
