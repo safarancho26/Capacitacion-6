@@ -6,9 +6,11 @@ env:
   Nombre: "Eliany"
 
 jobs:
-
-  steps:
-    name: concatenar
-    runs-on: ubuntu-lastest
-      run  |
-     "$apellido="Gaitan" echo {{env.Nombre}} echo $apellido"
+  job1:
+    runs-on: ubuntu
+    
+    steps:
+      - name: concatenar
+    
+        run: |
+         "$apellido="Gaitan" echo {{env.Nombre}} echo $apellido"
