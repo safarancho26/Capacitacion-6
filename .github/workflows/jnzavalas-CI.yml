@@ -30,10 +30,16 @@ jobs:
         run: echo automatizacion lint, por jnzavalas
 
   Integracion:
-
+      permissions:
+        contents: read
+        packages: read
+      # To report GitHub Actions status checks
+        statuses: write
       runs-on: ubuntu-latest
 
       steps:
         - name: integracion
           uses: super-linter/super-linter@latest
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
