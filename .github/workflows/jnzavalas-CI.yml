@@ -47,6 +47,6 @@ jobs:
        - name: integracion
          uses: super-linter/super-linter@latest
          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.actions_token }}
             FIX_YAML_PRETTIER: true
           
