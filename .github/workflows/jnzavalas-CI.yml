@@ -5,10 +5,10 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  push: null
+   
+  pull_request: null
+
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -38,8 +38,12 @@ jobs:
       runs-on: ubuntu-latest
 
       steps:
-        - name: integracion
-          uses: super-linter/super-linter@latest
-          env:
+       - name: checkout
+         uses: actions/checkout@v4
+
+      
+       - name: integracion
+         uses: super-linter/super-linter@latest
+         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
