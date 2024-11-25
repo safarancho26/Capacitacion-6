@@ -1,0 +1,13 @@
+name: PrimeraAction
+
+on: [workflow_dispatch]
+
+env:
+  nombre: Senya
+
+jobs:
+  imprimir:
+    runs-on: ubuntu@latest
+    steps:
+      - name: imprecion
+        run: echo ${{ env.nombre }}
